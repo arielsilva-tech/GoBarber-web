@@ -53,15 +53,18 @@ const SignUp: React.FC = () => {
           description: 'Voce já pode fazer seu logon no GOBarber',
         });
       } catch (err) {
-        const errors = getValidationErrors(err);
-        if (errors instanceof Yup.ValidationError) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
+
           formRef.current?.setErrors(errors);
+
           return;
         }
+
         addToast({
           type: 'error',
-          title: 'Erro no Cadastro',
-          description: 'Ocorreu um erro ao fazer cadastro.',
+          title: 'Erro no cadastro',
+          description: 'Ocorreu um erro ao fazer cadastro, tente novamente.',
         });
       }
     },
