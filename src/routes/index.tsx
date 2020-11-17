@@ -5,7 +5,7 @@ import SignUp from '../pages/SignUp/Index';
 import Dashboard from '../pages/Dashboard';
 import Route from './Route';
 import ForgotPassword from '../pages/ForgotPassword/Index';
-import ResetPassword from "../pages/ResetPassword/Index";
+import ResetPassword from '../pages/ResetPassword/Index';
 
 const Routes: React.FC = () => (
   <Switch>
